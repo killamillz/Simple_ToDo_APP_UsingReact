@@ -1,0 +1,105 @@
+*{
+  box-sizing: border-box;   
+}
+body{
+     background: linear-gradient(to right, rgb(53, 53, 156), rgb(96, 48, 118));
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label{
+     font-size: 20px;
+     line-height: 50px;
+     color: black;
+     margin-left: 30px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-weight: bolder;
+}
+
+
+input{
+     background-color: rgba(167, 167, 237, 0.75);
+     height: 30px;
+     width: 40rem;
+     margin: auto  30px;
+     font-size: 20px;
+     padding: 15px;
+     color: rgb(28, 48, 58);
+     border-radius: 10px;
+     border:2px solid black;
+}
+
+button{
+     width: 10rem;
+     height: 2rem;
+     border-radius: 5px;
+     border: 0px;
+     margin: auto;
+     margin-top: 30px;
+     color: black;
+     background-color: rgba(255, 255, 255, .5);
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+button:hover{
+     background-color: rgba(255, 255, 255, .75);
+}
+
+
+.form-row{
+     display: flex;
+     flex-direction: column;
+}
+
+
+form{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.container{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     width: 60%;
+     margin: auto;
+}
+
+.list{
+     list-style: none;
+}
+
+.header{
+     margin-left: 30px;
+     margin-top: 50px;
+}
+
+.list label{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin-right: 40px;
+     width: 100%;
+}
+
+.list li{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+
+.list button{
+     margin: 0px;
+     color: red;
+     border: 1px solid red;
+     
+}
+
+
+
+.list input{
+     display: flex;
+     width: 20px;
+}
