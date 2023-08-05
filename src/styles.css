@@ -89,12 +89,17 @@ form{
      align-items: center;
 }
 
+.list p{
+     min-width: 500px;
+     margin: 0px;
+}
+
 
 .list button{
      margin: 0px;
      color: red;
      border: 1px solid red;
-     
+     margin-bottom: 30px;
 }
 
 
