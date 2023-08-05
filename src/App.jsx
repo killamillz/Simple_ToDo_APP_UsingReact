@@ -15,7 +15,22 @@ export default function App() {
                     { id: crypto.randomUUID(), title: newItem, completed: false }
                ]
           })
+
+          setNewItem("")
      }
+
+     function toggleTodo(id, completed) {
+          setTodos(currentTodos => {
+               return currentTodos.map(todo => {
+                    if (todo.id === id) {
+                         return { ...todo, completed }
+                    }
+                    return todo
+               })
+          })
+     }
+
+     // function deleteTodos(id)
  
 
   return (
@@ -24,7 +39,7 @@ export default function App() {
                <form onSubmit={handleSubmit} className="new-item-form">
                     <div className="form-row">
                          <label htmlFor="item">New Task</label>
-                         <input value={newItem}onChange={ e => setNewItem(e.target.value)}type="text" id="item" />
+                         <input value={newItem}onChange={ e => setNewItem(e.target.value)} type="text" id="item" />
                     </div>
                     <button className="btn">Add</button>
                </form>
@@ -33,13 +48,15 @@ export default function App() {
                     <h1 className="header">Todo List</h1>
                     <ul className="list">
                     {todos.map((todo) => {
-                         return <li>
+                         return (
+                              <li key={todo.id}>
                               <label>
-                                   <input type="checkbox " checked={todo.completed}/>
+                                   <input type="checkbox " checked={todo.completed} onChange={e => toggleTodo(todo.id, e.target.checked)}/>
                                    {todo.title} 
                               </label>
-                              <button className="btb btn-danger">Delete</button>
+                              <button className="btn btn-danger">Delete</button>
                          </li>
+                         )
                     })}
                     </ul>
                </div>
